@@ -1,18 +1,19 @@
-import { PersonService } from "../../module/model";
+import { PersonService, PersonList } from "../../module/model";
 
 type PersonProps = {
-  name: PersonService;
+  name: PersonService["name"];
+
   roll?: number; // optional
   //   nameList: PersonService[]; // array of objects
-  nameList: {
-    first: string;
-    last: string;
-  }[];
+  nameList: PersonList[];
 };
+
+// console.log("PersonService", PersonService);
 
 const Person = (props: PersonProps) => {
   const {
     name: { first, last, abc },
+
     roll = 0,
     nameList,
   } = props;

@@ -4,10 +4,21 @@ import Events from "./components/Events/Events";
 import Heading from "./components/Heading/Heading";
 import Oscar from "./components/Oscar/Oscar";
 import Status from "./components/Status/Status";
+import Container from "./components/Container/Container";
+import Person from "./components/Person/Person";
+import LoggedIn from "./components/State/LoggedIn";
+import User from "./components/State/User";
+import Counter from "./components/State/Counter";
+import ThemeContextProvider from "./components/context/ThemeContext";
+import Box from "./components/context/Box";
+import UserContextProvider from "./components/context/UserContext";
+import UserMain from "./components/context/User";
+import MutableReference from "./components/Ref/Mutable";
 
 function App() {
   const [inputData, setInputData] = useState<string>("");
   const personName = {
+    // name: {
     first: "Bruce",
     last: "Wayne",
     abc: [
@@ -17,6 +28,7 @@ function App() {
         },
       },
     ],
+    // },
   };
 
   const nameList = [
@@ -33,8 +45,11 @@ function App() {
       last: "Wayne",
     },
   ];
-
-  const handleClick = (event: React.MouseEvent, id: number) => {
+  UserContextProvider;
+  const handleClick = (
+    event: React.MouseEvent<HTMLButtonElement>,
+    id: number
+  ) => {
     console.log("Button clicked", event, id);
   };
 
@@ -54,12 +69,33 @@ function App() {
       {/* <Oscar>
         <Heading>Placeholder text</Heading>
       </Oscar> */}
-
+      {/* 
       <Events
         handleClick={handleClick}
         value={inputData}
         handleChange={handleChange}
-      />
+      /> */}
+      {/* 
+      <Container
+        name="akash"
+        styles={{
+          border: "1px solid black",
+          padding: "1rem",
+        }}
+      /> */}
+
+      {/* <LoggedIn /> */}
+      {/* <User /> */}
+      {/* <Counter /> */}
+
+      {/* <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider> */}
+
+      {/* <UserContextProvider>
+        <UserMain />
+      </UserContextProvider> */}
+      <MutableReference />
     </div>
   );
 }

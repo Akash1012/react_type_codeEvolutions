@@ -1,7 +1,13 @@
-const Container = () => {
+type containerProps = {
+  styles: React.CSSProperties;
+  name: string;
+};
+
+const Container = ({ styles, name }: containerProps) => {
+  // const { styles } = props;
   return (
-    <div>
-      <h1>Container</h1>
+    <div style={styles}>
+      <h1>Container {name}</h1>
     </div>
   );
 };
