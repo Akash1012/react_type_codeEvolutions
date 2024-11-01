@@ -14,6 +14,13 @@ import Box from "./components/context/Box";
 import UserContextProvider from "./components/context/UserContext";
 import UserMain from "./components/context/User";
 import MutableReference from "./components/Ref/Mutable";
+import CounterClass from "./components/class/CounterClass";
+import Private from "./components/auth/Private";
+import Profile from "./components/auth/Profile";
+import List from "./components/Generics/List";
+import RandomNumber from "./components/Restriction/RandomNumber";
+import TemplateLit from "./components/TemplateLiterals/TemplateLit";
+import CustomButton from "./components/HTML/Button";
 
 function App() {
   const [inputData, setInputData] = useState<string>("");
@@ -95,7 +102,29 @@ function App() {
       {/* <UserContextProvider>
         <UserMain />
       </UserContextProvider> */}
-      <MutableReference />
+      {/* <MutableReference /> */}
+      {/* <CounterClass message="Hello world" /> */}
+
+      {/* <Private isLoggedIn={false} Component={Profile} /> */}
+
+      {/* <List items={["A", "B", "C"]} onClick={(item) => alert(item)} />
+      <List items={["A", 1, "C"]} onClick={(item) => alert(item)} /> */}
+      {/* <List
+        items={[
+          {
+            id: 100,
+            first: "aaa",
+            last: "bbb",
+          },
+        ]}
+        onClick={(item) => console.log(item)}
+      /> */}
+
+      {/* <RandomNumber value={100} isPositive /> */}
+      {/* <TemplateLit position="center" /> */}
+      <CustomButton onClick={() => console.log("Clicked")} variant="primary">
+        Primary Button
+      </CustomButton>
     </div>
   );
 }
