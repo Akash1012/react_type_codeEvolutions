@@ -21,6 +21,8 @@ import List from "./components/Generics/List";
 import RandomNumber from "./components/Restriction/RandomNumber";
 import TemplateLit from "./components/TemplateLiterals/TemplateLit";
 import CustomButton from "./components/HTML/Button";
+import CustomCp from "./components/HTML/CustomCp";
+import Text from "./components/polymorphic/Text";
 
 function App() {
   const [inputData, setInputData] = useState<string>("");
@@ -122,9 +124,21 @@ function App() {
 
       {/* <RandomNumber value={100} isPositive /> */}
       {/* <TemplateLit position="center" /> */}
-      <CustomButton onClick={() => console.log("Clicked")} variant="primary">
+      {/* <CustomButton onClick={() => console.log("Clicked")} variant="primary">
         Primary Button
-      </CustomButton>
+      </CustomButton> */}
+
+      {/* <CustomCp name="akash" /> */}
+
+      <Text as="h1" size="lg">
+        Heading
+      </Text>
+      <Text as="p" size="md">
+        Paragraph
+      </Text>
+      <Text as="label" htmlFor="someId" size="sm" color="secondary">
+        Label
+      </Text>
     </div>
   );
 }
